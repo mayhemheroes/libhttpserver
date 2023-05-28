@@ -11,7 +11,7 @@ RUN ../configure --prefix=/install
 RUN make -j8
 RUN make install
 
-RUN clang++ /repo/mayhem/fuzz_to_lower_copy.cpp  -fsanitize=fuzzer,address -std=c++17 -I /repo/src/ /install/lib/libhttpserver.a -o /fuzz_to_lower_copy
+RUN clang++ /repo/mayhem/fuzz_to_lower_copy.cpp  -fsanitize=fuzzer,address -std=c++17 -I /repo/src/ /install/lib/libhttpserver.a -o /fuzz
 
 FROM ubuntu:22.04 as package
 
