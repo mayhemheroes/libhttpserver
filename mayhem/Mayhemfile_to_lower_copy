@@ -1,0 +1,5 @@
+project: libhttpserver
+target: to-lower-copy
+cmds:
+  - cmd: /fuzz_to_lower_copy
+    libfuzzer: true
